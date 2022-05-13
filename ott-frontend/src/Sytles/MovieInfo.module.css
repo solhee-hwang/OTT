@@ -1,0 +1,5 @@
+.information img{
+    object-fit: cover;
+    height: 300px;
+    max-width: 200px;
+}

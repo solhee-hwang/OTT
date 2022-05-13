@@ -1,0 +1,50 @@
+.Logo {
+  width: 10rem;
+  height: 4rem;
+}
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: sticky; /* 네비바 고정 */
+  top: 0;
+  z-index: 1; /* 가장 앞으로 배치 */
+}
+.movie_container {
+  display: flex;
+  /* 컨텐츠 중앙 */
+  /* justify-content: center; */
+  flex-wrap: wrap;
+}
+
+/* .msearch {
+  padding: 7em;
+} */
+
+.search {
+  background-color: transparent;
+  border: 2px solid #424242;
+  border-radius: 50px;
+  color: white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+}
+
+h1 {
+  color: white;
+}
+
+.input-group #search_btn {
+  background-color: transparent;
+}
+.button {
+  background-color: transparent;
+  color: white;
+  height: 35px;
+}
+.movie-container {
+  align-items: center;
+}

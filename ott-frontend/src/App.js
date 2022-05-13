@@ -1,15 +1,9 @@
-import "./App.css";
 import React from "react";
-import Login from "./Pages/Login";
-import { ThemeProvider } from "@material-ui/core";
-import { theme } from "./sytle/Theme";
-import SignUp from "./Pages/SignUp";
+import Main from "./Pages/Main";
+import "./App.css";
+
 const App = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <SignUp />
-    </ThemeProvider>
-  );
+  return <Main />;
 };
 
 export default App;

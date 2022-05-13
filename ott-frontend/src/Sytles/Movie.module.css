@@ -1,0 +1,32 @@
+h2,h3, p{
+    color: white;
+}
+
+
+.movie {
+    background-color: #1b1b1b;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+    align-items: center;
+  }
+
+  .movie img {
+    object-fit: cover;
+    height: 450px;
+    max-width: 100%;
+  }
+
+  .movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #1b1b1b} 
+
+  .movie-info h3 {
+    margin: 0;
+  } 
