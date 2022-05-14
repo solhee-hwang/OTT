@@ -1,9 +1,16 @@
 import React from "react";
 import Main from "./Pages/Main";
+import Login from "./Pages/Login";
 import "./App.css";
+import { ThemeProvider } from "@material-ui/core";
+import { theme } from "./Sytles/Theme";
 
 const App = () => {
-  return <Main />;
+  return (
+    <ThemeProvider theme={theme}>
+      <Login />
+    </ThemeProvider>
+  );
 };
 
 export default App;
