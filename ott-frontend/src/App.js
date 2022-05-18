@@ -8,7 +8,7 @@ import { theme } from "./Sytles/Theme";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Login />
+      <Main />
     </ThemeProvider>
   );
 };
