@@ -4,6 +4,7 @@ import com.ott.ott_backend.Service.UserService;
 import com.ott.ott_backend.dto.UserDTO;
 import com.ott.ott_backend.model.UserEntity;
 import com.ott.ott_backend.persistence.ResponseDTO;
+import com.ott.ott_backend.security.TokenProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private TokenProvider tokenProvider;
 
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO){
@@ -45,9 +48,11 @@ public class UserController {
                 userDTO.getEmail(),
                 userDTO.getPassword());
         if(user!=null){
+            final String token = tokenProvider.create(user);
             final UserDTO responseUserDTO = UserDTO.builder()
                     .email(user.getEmail())
                     .id(user.getId())
+                    .token(token)
                     .build();
             return ResponseEntity.ok().body(responseUserDTO);
         }else{
