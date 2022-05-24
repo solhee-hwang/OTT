@@ -8,6 +8,7 @@ import com.ott.ott_backend.security.TokenProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,6 @@ public class UserController {
     @Autowired
     private TokenProvider tokenProvider;
 
-    private PasswordEncoder passwordEncoder;
     @PostMapping("/signup")
     public ResponseEntity<?> registerUser(@RequestBody UserDTO userDTO){
         try{
@@ -45,21 +45,27 @@ public class UserController {
         }
     }
     @PostMapping("/signin")
-    public ResponseEntity<?> authenticate(@RequestBody UserDTO userDTO){
+    public ResponseEntity<?> authenticate(@RequestBody UserDTO userDTO) {
         UserEntity user = userService.getByCredentials(
                 userDTO.getEmail(),
-                userDTO.getPassword(), passwordEncoder);
-        if(user!=null){
+                userDTO.getPassword());
+
+        if(user != null) {
+            // 토큰 생성
             final String token = tokenProvider.create(user);
             final UserDTO responseUserDTO = UserDTO.builder()
-                    .email(user.getEmail())
+                    .email(user.getUsername())
                     .id(user.getId())
                     .token(token)
                     .build();
             return ResponseEntity.ok().body(responseUserDTO);
-        }else{
-            ResponseDTO responseDTO = ResponseDTO.builder().error("Login failed").build();
-            return ResponseEntity.badRequest().body(responseDTO);
+        } else {
+            ResponseDTO responseDTO = ResponseDTO.builder()
+                    .error("Login failed.")
+                    .build();
+            return ResponseEntity
+                    .badRequest()
+                    .body(responseDTO);
         }
     }
 
