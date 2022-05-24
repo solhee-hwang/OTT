@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import Main from "./Pages/Main";
+import SignUp from "./Pages/SignUp";
 
 const CopyRight = () => {
   return (
@@ -20,7 +21,8 @@ const AppRouter = () => {
         <div>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route path="/main" element={<Main />}></Route>
+            <Route path="/" element={<Main />}></Route>
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>
       </Router>

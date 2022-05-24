@@ -7,10 +7,23 @@ import {
   Container,
   Typography,
 } from "@material-ui/core";
+import { signup } from "../Service/ApiService";
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const username = data.get("username");
+  const email = data.get("email");
+  const password = data.get("password");
+  signup({ email: email, username: username, password: password }).then(
+    (response) => {
+      window.location.href = "/login";
+    }
+  );
+};
 const SignUp = () => {
   return (
     <Container component="main" maxWidth="xs" style={{ marginTop: "8%" }}>
-      <form>
+      <form noValidate onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography
