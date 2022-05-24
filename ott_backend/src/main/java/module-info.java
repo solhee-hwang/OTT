@@ -1,2 +1,0 @@
-module ott.backend.main {
-}

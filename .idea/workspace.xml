@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63a6d69a-37bf-4855-a826-53e06527daed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ott_backend/src/main/java/com/ott/ott_backend/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OTT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ott-frontend/src/Pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/ott-frontend/src/Pages/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ott-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ott-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ott_backend/src/main/java/com/ott/ott_backend/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ott_backend/src/main/java/com/ott/ott_backend/config/WebSecurityConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29Qn9i4aNFrkuoONLQuhqYp6H5F" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>

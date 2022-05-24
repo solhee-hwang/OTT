@@ -1,4 +1,5 @@
 import React from "react";
+import { signin } from "../Service/ApiService";
 import {
   Link,
   Button,
@@ -7,7 +8,13 @@ import {
   Container,
   Typography,
 } from "@material-ui/core";
-
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const email = data.get("email");
+  const password = data.get("password");
+  signin({ email: email, password: password });
+};
 const Login = () => {
   return (
     <Container component="main" maxWidth="xs" style={{ marginTop: "8%" }}>
@@ -22,7 +29,7 @@ const Login = () => {
           </Typography>
         </Grid>
       </Grid>
-      <form>
+      <form noValidate onSubmit={handleSubmit}>
         {" "}
         {/* submit 버튼을 누르면 handleSubmit이 실행됨. */}
         <Grid container spacing={2}>
